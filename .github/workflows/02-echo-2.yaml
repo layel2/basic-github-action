@@ -1,0 +1,10 @@
+name: GitHub-Actions-Demo2
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "TEST - 2"
+      - name: Check out repository code
+        uses: actions/checkout@v4
