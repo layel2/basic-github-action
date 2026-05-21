@@ -28,9 +28,9 @@ jobs:
       - name: Tag Docker image
         env:
             IMAGE_TAG: dev-${{ github.run_number }}
-        run: docker tag testapi ${{ secrets.DOCKER_USERNAME }}/testapi:$IMAGE_TAG
+        run: docker tag testapi ${{ secrets.DOCKER_USERNAME }}/testapi:latest
 
       - name: Push Docker image to Docker Hub
         env:
           IMAGE_TAG: dev-${{ github.run_number }}
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/testapi:$IMAGE_TAG
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/testapi:latest
