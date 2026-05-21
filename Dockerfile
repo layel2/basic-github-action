@@ -5,6 +5,6 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 ADD ./src/ /app/
-EXPOSE 8000
+EXPOSE 10000
 
-CMD ["uvicorn", "main:app", "--port", "8000", "--reload"]
+CMD ["uvicorn", "main:app", "--port", "10000", "--reload"]
